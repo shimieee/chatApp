@@ -95,7 +95,7 @@ export default function Register({ navigation }) {
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.signInText}>Already have an account? Login</Text>
+          <Text style={styles.signInText}>Already have an account?          Login</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderColor: "#ffb6c1", // Light pink
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 10,
     paddingHorizontal: 10,
     marginBottom: 20,
     color: "#333",
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffb6c1", // Light pink
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 8,
+    borderRadius: 10,
     marginBottom: 20,
   },
   buttonText: {

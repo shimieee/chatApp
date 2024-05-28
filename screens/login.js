@@ -58,7 +58,7 @@ export default function Login({ navigation }) {
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-          <Text style={styles.signUpText}>Don't have an account? Sign Up</Text>
+          <Text style={styles.signUpText}>Don't have an account?          Sign Up</Text>
         </TouchableOpacity>
       </View>
     </KeyboardAvoidingView>
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderColor: "#F8C8DC", // Pastel pink
     borderWidth: 1,
-    borderRadius: 8,
+    borderRadius: 10,
     paddingHorizontal: 10,
     marginBottom: 20,
     color: "#333",
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8C8DC", // Pastel pink
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 8,
+    borderRadius: 10,
     marginBottom: 20,
   },
   buttonText: {
