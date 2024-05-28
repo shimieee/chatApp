@@ -5,13 +5,15 @@ import { createStackNavigator } from "@react-navigation/stack";
 //importing screens 
 import Chat from "./screens/chat";
 import Login from "./screens/login";
+import Register from "./screens/register";
 
 const Stack = createStackNavigator();
 
 function ChatStack() {
   return(
     <Stack.Navigator>
-      <Stack.Screen name="login" component={Login} options={{ headerShown: false }}/>
+      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
+      <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
     </Stack.Navigator>
   )
 }
