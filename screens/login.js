@@ -24,7 +24,17 @@ export default function Login({ navigation }) {
       keyboardVerticalOffset={80}
     >
       <View style={styles.innerContainer}>
-        <Text style={styles.title}>Login</Text>
+        <View style={styles.logoContainer}>
+          <Text style={[styles.logoText, styles.pink]}>4</Text>
+          <Text style={[styles.logoText, styles.orange]}>t</Text>
+          <Text style={[styles.logoText, styles.yellow]}>h</Text>
+          <Text style={[styles.logoText, styles.green]}>e</Text>
+          <Text style={[styles.logoText, styles.blue]}>g</Text>
+          <Text style={[styles.logoText, styles.indigo]}>a</Text>
+          <Text style={[styles.logoText, styles.violet]}>y</Text>
+          <Text style={[styles.logoText, styles.pink]}>s</Text>
+        </View>
+
         <TextInput
           style={styles.input}
           placeholder="Email"
@@ -34,6 +44,7 @@ export default function Login({ navigation }) {
           autoCapitalize="none"
           placeholderTextColor="#999"
         />
+
         <TextInput
           style={styles.input}
           placeholder="Password"
@@ -57,7 +68,7 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#FFEFEF",
   },
   innerContainer: {
     flex: 1,
@@ -65,16 +76,47 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
   },
+  logoContainer: {
+    flexDirection: "row",
+    marginBottom: 30,
+  },
+  logoText: {
+    fontSize: 69,
+    fontFamily: "Chalkboard SE", // Replace with your cute font
+    textAlign: "center",
+  },
+  orange: {
+    color: "#ffa07a", // Light salmon
+  },
+  yellow: {
+    color: "#ffd700", // Gold
+  },
+  green: {
+    color: "#98fb98", // Pale green
+  },
+  blue: {
+    color: "#add8e6", // Light blue
+  },
+  indigo: {
+    color: "#87cefa", // Light sky blue
+  },
+  violet: {
+    color: "#ee82ee", // Lavender
+  },
+  pink: {
+    color: "#F8C8DC", 
+  },
+
   title: {
     fontSize: 32,
     fontWeight: "bold",
     marginBottom: 20,
-    color: "#ff69b4", // Pink color
+    color: "#F8C8DC", // Pastel pink
   },
   input: {
     width: "100%",
     height: 50,
-    borderColor: "#ff69b4", // Pink color
+    borderColor: "#F8C8DC", // Pastel pink
     borderWidth: 1,
     borderRadius: 8,
     paddingHorizontal: 10,
@@ -84,7 +126,7 @@ const styles = StyleSheet.create({
   button: {
     width: "100%",
     height: 50,
-    backgroundColor: "#ff69b4", // Pink color
+    backgroundColor: "#F8C8DC", // Pastel pink
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 8,
@@ -96,7 +138,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   signUpText: {
-    color: "#ff69b4", // Pink color
+    color: "#F8C8DC", // Pastel pink
     marginTop: 20,
     fontSize: 16,
   },
