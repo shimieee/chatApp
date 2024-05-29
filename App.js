@@ -3,6 +3,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import {View , ActivityIndicator} from 'react-native';
 import { onAuthStateChanged } from "firebase/auth";
+import { auth } from './config/firebase';
+
 
 //importing screens 
 import Chat from "./screens/chat";
@@ -29,9 +31,9 @@ const AuthenticatedUserProvider = ({ children }) => {
 //deals with home/chat 
 function ChatStack() {
   return(
-    <Stack.Navigator options={{ headerShown: false }} defaultScreenOptions={Home}>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Chat" component={Chat}/>
+    <Stack.Navigator defaultScreenOptions={Home}>
+      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }}/>
+      <Stack.Screen name="Chat" component={Chat} options={{ headerShown: false }}/>
     </Stack.Navigator>
   )
 }
@@ -39,9 +41,9 @@ function ChatStack() {
 //deals w auth screens 
 function AuthStack() {
   return(
-    <Stack.Navigator options={{ headerShown: false }} defaultScreenOptions={Login}>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Register" component={Register}/>
+    <Stack.Navigator  defaultScreenOptions={Login}>
+      <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
+      <Stack.Screen name="Register" component={Register}options={{ headerShown: false }}/>
     </Stack.Navigator>
   )
 }

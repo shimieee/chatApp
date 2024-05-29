@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert, KeyboardAvoidingView, Platform, Picker } from "react-native";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
-import DropDownPicker from 'react-native-dropdown-picker';
+
+//comments for later 
+//the database need to recognize that username is an identifier of the user account and make sure it is unique 
+//also the text in password and confirm password should be the same if not throw error that is visible in the UI 
 
 export default function Register({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [username, setUsername] = useState("");
-  const [pronouns, setPronouns] = useState("Select Pronouns");
 
   const onHandleRegister = () => {
-    if (email !== "" && password !== "" && confirmPassword !== "" && password === confirmPassword && username !== "" && pronouns !== "Select Pronouns") {
+    if (email !== "" && password !== "" && confirmPassword !== "" && password === confirmPassword && username !== "" ) {
       createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
           Alert.alert("Registration successful", "You can now login.");
@@ -77,20 +79,7 @@ export default function Register({ navigation }) {
           autoCapitalize="none"
           placeholderTextColor="#999"
         />
-        <DropDownPicker
-          items={[
-            { label: 'Select Pronouns', value: null },
-            { label: 'She/Her', value: 'She/Her' },
-            { label: 'He/Him', value: 'He/Him' },
-            { label: 'They/Them', value: 'They/Them' },
-          ]}
-          defaultValue={pronouns}
-          containerStyle={styles.input}
-          placeholder="Select Pronouns"
-          dropDownStyle={styles.pronounsDropdown}
-          onChangeItem={(item) => setPronouns(item.value)}
-        />
-
+      
         <TouchableOpacity style={styles.button} onPress={onHandleRegister}>
           <Text style={styles.buttonText}>Register</Text>
         </TouchableOpacity>

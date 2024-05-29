@@ -3,6 +3,12 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, Alert, KeyboardAvo
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
 
+
+//comments for later 
+//maybe in the future change it to email/username if possible idk if e get that possibility in firebase 
+// if pw is wrong show error in the UI 
+//if email doesnt exist in the db show error and suggest to sign up 
+
 export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
